@@ -3,9 +3,6 @@
 }
 
 
-
-
-
 <div id="TopShards">
     <div class="col-sm-2 TopShard" id="TopShard-1">TOP</div>
     <div class="col-sm-2 TopShard" id="TopShard-2">TOP</div>
@@ -20,7 +17,7 @@
             LEFT
         </div>
         <div class="col-sm-6" id="MirrorCenter">
-            <video  autoplay="true" id="videoElement" width="400" height="300"></video>
+            <video autoplay="true" id="videoElement" width="400" height="300"></video>
 
             <canvas id="imagecanvas" width="400" height="300"></canvas>
             <button id="snap" download="YourFileName.jpg">Ta foto</button>
@@ -38,3 +35,8 @@
     <div class="col-sm-2 BottomShard" id="BottomShard-4">BOTTOM</div>
     <div class="col-sm-2 BottomShard" id="BottomShard-5">BOTTOM</div>
 </div>
+
+@section scripts{
+    <script src="~/js/MirrorScript.js"></script>
+    <link href="~/css/MirrorStyle.css" rel="stylesheet" />
+}

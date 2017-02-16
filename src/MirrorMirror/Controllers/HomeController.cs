@@ -20,30 +20,13 @@ namespace MirrorMirror.Controllers
             return View();
         }
 
+        
         [HttpPost]
-        public async Task<string> VerifyFace([FromBody] string image)
+        public async Task<JsonResult> VerifyFace([FromBody] string image)
         {
-            
-            return await faceApi.DetectFace(image);
+            var result = await faceApi.DetectFace(image);
+            return Json(result);
 
         }
-
-        /*
-        [HttpPost]
-        public ActionResult SaveSnapshot()
-        {
-            bool saved = false;
-            if (Request.Form["base64data"] != null)
-            {
-                string image = Request.Form["base64data"].ToString();
-                byte[] data = Convert.FromBase64String(image);
-                var path = Path.Combine(Server.MapPath("~/Upload"), "snapshot.png");
-                System.IO.File.WriteAllBytes(path, data);
-                saved = true;
-            }
-
-            return Json(saved ? "image saved" : "image not saved");
-        }
-        */
     }
 }

@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Admin - add api key";
+}
+
+@model MirrorMirror.Models.ViewModels.Admin.CreateFaceApiKeyVM
+
+<form asp-controller="Admin" asp-action="CreateFaceApiKey">
+    <label asp-for="ApiKey"></label>
+    <br />
+    <input asp-for="ApiKey" />
+    <span asp-validation-for="ApiKey"></span>
+    <br />
+    <input type="submit" value="Save" />
+</form>

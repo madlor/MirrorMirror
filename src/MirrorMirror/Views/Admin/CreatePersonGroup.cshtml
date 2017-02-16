@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Admin - add person group";
+}
+
+@model MirrorMirror.Models.ViewModels.Admin.CreatePersonGroupVM
+
+<form asp-controller="Admin" asp-action="CreatePersonGroup">
+    <label asp-for="PersonGroupID"></label>
+    <br />
+    <input asp-for="PersonGroupID" />
+    <span asp-validation-for="PersonGroupID"></span>
+    <br />
+    <label asp-for="PersonGroupName"></label>
+    <br />
+    <input asp-for="PersonGroupName" />
+    <span asp-validation-for="PersonGroupName"></span>
+    <br />
+    <input type="submit" value="Save" />    
+</form>
