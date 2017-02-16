@@ -12,9 +12,7 @@ namespace MirrorMirror.Models.APIs
 {
     public class FaceApi
     {
-        private FaceServiceClient faceClient;        
-        //private string apiKey = KeyHandler.GetFaceApiKey();
-        //private string apiUrl = "https://api.projectoxford.ai/face/v1.0/detect?returnFaceId=true";
+        private FaceServiceClient faceClient;
 
         private string[] personGroupID = FaceApiConfiguration.GetPersonGroupID();
 
